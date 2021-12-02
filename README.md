@@ -15,7 +15,7 @@
 <br>
 
 <p align="center">
-  <img alt="OriginSix" src="https://user-images.githubusercontent.com/48075242/138159057-44482b0d-f0d0-496d-9152-4f25eb95ee1d.png" width="100%">
+  <img alt="Modal" src="https://user-images.githubusercontent.com/48075242/144512283-f4795f27-321e-47fb-bc8c-3c18866a037a.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML
 - CSS
--JavaScript
+- JavaScript
 
 Bibliotecas
 
