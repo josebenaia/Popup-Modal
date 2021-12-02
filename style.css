@@ -1,0 +1,157 @@
+:root {
+  /* color */
+  --body-color: hsl(240, 5%, 7%, 100%);
+  --color-black-hith: hsl(240, 7%, 12%, 100%);
+  --color-roxo: hsl(258, 74%, 62%, 100%);
+  --color-green: hsl(147, 96%, 42%, 100%);
+  --color-white: hsl(240, 9%, 89%, 100%);
+
+  /* font */
+  --big-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+
+  --z-modal: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+button {
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.modal {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.modal__button {
+  display: inline-block;
+  background-color: var(--color-green);
+  color: var(--body-color);
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: 0.4s ease;
+}
+
+.modal__button:hover {
+  background-color: var(--color-roxo);
+  color: white;
+}
+
+.modal__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: var(--z-modal);
+  visibility: hidden;
+  opacity: 0;
+}
+.modal__content {
+  position: relative;
+  background-color: var(--color-black-hith);
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all 0.3s ease;
+
+  transform: translateY(10%);
+}
+
+.Gith {
+  font-size: 8rem;
+  color: var(--color-roxo);
+  margin-bottom: 0.75rem;
+}
+.modal__close {
+  display: inline-flex;
+  background-color: var(--color-green);
+  border-radius: 0.25rem;
+  color: var(--body-color);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.modal__title {
+  font-size: var(--big-font-size);
+  color: var(--color-white);
+  font-weight: 600;
+}
+.modal__description {
+  font-weight: 500;
+  color: #888889;
+  margin-bottom: 1.5rem;
+}
+.modal__button-width {
+  width: 90%;
+  font-weight: bold;
+  color: var(--body-color);
+}
+.modal__button-link {
+  display: block;
+  font-weight: bold;
+  margin: 1rem auto 0;
+  background: transparent;
+  color: var(--color-roxo);
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.show-modal .modal__content {
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 576px) {
+  .modal__content {
+    margin: auto;
+    width: 23.75rem;
+    border-radius: 1.25rem;
+  }
+  .Gith {
+    font-size: 10rem;
+  }
+}
